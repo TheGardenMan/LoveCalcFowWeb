@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+</head>
+<body>
+	<p>Hi {{owner_name}}!<br> Share the follow link with ur friends!</p>
+	<p>http://127.0.0.1:8000/calc/{{owner_id}}</p>
+	<b>Your secret link to access dashboard is below</b>
+	<p>http://127.0.0.1:8000/dashboard/{{secret_hash_of_owner}}</p>
+	{% if users_and_crushes %}
+	{% for user_and_crush in users_and_crushes %}
+		<pre>
+			<b>	{{ user_and_crush.0 }}</b> ---&gt; <b>{{ user_and_crush.1 }}</b>
+		</pre>
+	{% endfor %}
+	{% endif %}
+</body>
+</html>

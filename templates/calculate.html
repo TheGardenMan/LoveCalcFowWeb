@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Love calc</title>
+</head>
+<body>
+	<form method="post">
+		{% csrf_token %}
+		<p>Enter your name!</p>
+		<br>
+		<input type="text" name="user_name">
+		<p>Enter your crush name!</p>
+		<br>
+		<input type="text" name="crush_name">
+		<input type="submit" value="Register">
+	</form>
+
+</body>
+</html>
